@@ -1,12 +1,12 @@
 {
-  "name": "hello-world",
-  "version": "1.2.0",
-  "description": "alexa utility for quickly building skills",
+  "name": "phasmophobia",
+  "version": "0.0.1",
+  "description": "Skill zum Videospiel Phasmophobia",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Amazon Alexa",
+  "author": "Nick Böcker <info@nick-hat-boecker.de>",
   "license": "Apache License",
   "dependencies": {
     "ask-sdk-core": "^2.7.0",

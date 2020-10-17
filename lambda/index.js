@@ -4,6 +4,7 @@
  * session persistence, api calls, and more.
  * */
 const Alexa = require('ask-sdk-core');
+const Skill = require('skill.js')
 
 const LaunchRequestHandler = {
     canHandle(handlerInput) {
@@ -34,22 +35,37 @@ const HelloWorldIntentHandler = {
     }
 };
 
+/**
+ * Numerate proofs for given ghost
+ */
 const NameResult = {
-  canHandle(handlerInput) {
-    return handlerInput.requestEnvelope.request.type === 'IntentRequest'
-      && handlerInput.requestEnvelope.request.intent.name === 'NameResult';
-  },
-  handle(handlerInput) {
-    const requestAttributes = handlerInput.attributesManager.getRequestAttributes();
-    const sessionAttributes = handlerInput.attributesManager.getSessionAttributes();
+    canHandle(handlerInput) {
+        const type = handlerInput.requestEnvelope.request.type;
+        const intentName = handlerInput.requestEnvelope.request.intent.name;
+      
+        return type === 'IntentRequest' && intentName === 'NameResult';
+    },
+    handle(handlerInput) {
+        const requestAttributes = handlerInput.attributesManager.getRequestAttributes();
+        const sessionAttributes = handlerInput.attributesManager.getSessionAttributes();
 
-    let ghostName = '';
-    const ghostSlot = handlerInput.requestEnvelope.request.intent.slots.geist;
-    let itemName;
-    if (ghostSlot && ghostSlot.value) {
-      ghostName = ghostSlot.value.toLowerCase();
+        let ghostName = '';
+        const ghostSlot = handlerInput.requestEnvelope.request.intent.slots.geist;
+        if (ghostSlot && ghostSlot.value) {
+            ghostName = ghostSlot.value.toLowerCase();
+        }
+        
+        let speakOutput = 'Tut mir leid, diesen Geist kenne ich nicht';
+        try {
+            speakOutput = Skill.ghosts.find(x => x.name === ghostName).nameResult;
+        } catch (e) {
+            // do nothing
+        }
+    
+        return handlerInput.responseBuilder
+            .speak(speakOutput)
+            .getResponse();
     }
-  }
 };
 
 const HelpIntentHandler = {

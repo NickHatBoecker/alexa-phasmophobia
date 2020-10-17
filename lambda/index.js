@@ -44,7 +44,7 @@ const NameResult = {
     const sessionAttributes = handlerInput.attributesManager.getSessionAttributes();
 
     let ghostName = '';
-    const ghostSlot = handlerInput.requestEnvelope.request.intent.slots.ghost;
+    const ghostSlot = handlerInput.requestEnvelope.request.intent.slots.geist;
     let itemName;
     if (ghostSlot && ghostSlot.value) {
       ghostName = ghostSlot.value.toLowerCase();

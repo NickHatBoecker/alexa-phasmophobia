@@ -1,4 +1,4 @@
-export const ghosts = [
+module.exports.ghosts = [
     {
         name: "Banshee",
         nameResult: "Für die Banshee musst du das Geisterbuch, die Geisterkugeln und Gefriertemperaturen in das Journal eintragen.",

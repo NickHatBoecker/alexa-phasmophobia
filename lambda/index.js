@@ -34,6 +34,24 @@ const HelloWorldIntentHandler = {
     }
 };
 
+const NameResult = {
+  canHandle(handlerInput) {
+    return handlerInput.requestEnvelope.request.type === 'IntentRequest'
+      && handlerInput.requestEnvelope.request.intent.name === 'NameResult';
+  },
+  handle(handlerInput) {
+    const requestAttributes = handlerInput.attributesManager.getRequestAttributes();
+    const sessionAttributes = handlerInput.attributesManager.getSessionAttributes();
+
+    let ghostName = '';
+    const ghostSlot = handlerInput.requestEnvelope.request.intent.slots.ghost;
+    let itemName;
+    if (ghostSlot && ghostSlot.value) {
+      ghostName = ghostSlot.value.toLowerCase();
+    }
+  }
+};
+
 const HelpIntentHandler = {
     canHandle(handlerInput) {
         return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'

@@ -4,7 +4,9 @@
  * session persistence, api calls, and more.
  * */
 const Alexa = require('ask-sdk-core');
-const Skill = require('skill.js')
+const Skill = require('skill.js');
+
+const GHOST_SLOT = 'geist';
 
 const LaunchRequestHandler = {
     canHandle(handlerInput) {
@@ -20,53 +22,57 @@ const LaunchRequestHandler = {
     }
 };
 
-const HelloWorldIntentHandler = {
-    canHandle(handlerInput) {
-        return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
-            && Alexa.getIntentName(handlerInput.requestEnvelope) === 'HelloWorldIntent';
-    },
-    handle(handlerInput) {
-        const speakOutput = 'Hello World!';
-
-        return handlerInput.responseBuilder
-            .speak(speakOutput)
-            //.reprompt('add a reprompt if you want to keep the session open for the user to respond')
-            .getResponse();
-    }
-};
-
 /**
  * Numerate proofs for given ghost
  */
 const NameResultIntentHandler = {
-    canHandle(handlerInput) {
+    canHandle (handlerInput) {
         const type = handlerInput.requestEnvelope.request.type;
         const intentName = handlerInput.requestEnvelope.request.intent.name;
-      
+
         return type === 'IntentRequest' && intentName === 'NameResult';
     },
-    handle(handlerInput) {
-        const requestAttributes = handlerInput.attributesManager.getRequestAttributes();
-        const sessionAttributes = handlerInput.attributesManager.getSessionAttributes();
+    handle (handlerInput) {
+        const ghostName = getGhostName(handlerInput);
 
-        let ghostName = '';
-        const ghostSlot = handlerInput.requestEnvelope.request.intent.slots.geist;
-        if (ghostSlot && ghostSlot.value) {
-            ghostName = ghostSlot.value.toLowerCase();
-        }
-        
         let speakOutput = 'Tut mir leid, diesen Geist kenne ich nicht';
         try {
             speakOutput = Skill.ghosts.find(x => x.name.toLowerCase() === ghostName).nameResult;
         } catch (e) {
             // do nothing
         }
-    
+
         return handlerInput.responseBuilder
             .speak(speakOutput)
             .getResponse();
     }
 };
+
+/**
+ * Spill some information about the ghost
+ */
+const GhostDescriptionIntentHandler = {
+    canHandle (handlerInput) {
+        const type = handlerInput.requestEnvelope.request.type;
+        const intentName = handlerInput.requestEnvelope.request.intent.name;
+
+        return type === 'IntentRequest' && intentName === 'GhostDescription';
+    },
+    handle (handlerInput) {
+        const ghostName = getGhostName(handlerInput);
+
+        let speakOutput = 'Tut mir leid, diesen Geist kenne ich nicht';
+        try {
+            speakOutput = Skill.ghosts.find(x => x.name.toLowerCase() === ghostName).description;
+        } catch (e) {
+            // do nothing
+        }
+
+        return handlerInput.responseBuilder
+            .speak(speakOutput)
+            .getResponse();
+    }
+}
 
 const HelpIntentHandler = {
     canHandle(handlerInput) {
@@ -100,7 +106,7 @@ const CancelAndStopIntentHandler = {
 /* *
  * FallbackIntent triggers when a customer says something that doesn’t map to any intents in your skill
  * It must also be defined in the language model (if the locale supports it)
- * This handler can be safely added but will be ingnored in locales that do not support it yet 
+ * This handler can be safely added but will be ingnored in locales that do not support it yet
  * */
 const FallbackIntentHandler = {
     canHandle(handlerInput) {
@@ -117,9 +123,9 @@ const FallbackIntentHandler = {
     }
 };
 /* *
- * SessionEndedRequest notifies that a session was ended. This handler will be triggered when a currently open 
- * session is closed for one of the following reasons: 1) The user says "exit" or "quit". 2) The user does not 
- * respond or says something that does not match an intent defined in your voice model. 3) An error occurs 
+ * SessionEndedRequest notifies that a session was ended. This handler will be triggered when a currently open
+ * session is closed for one of the following reasons: 1) The user says "exit" or "quit". 2) The user does not
+ * respond or says something that does not match an intent defined in your voice model. 3) An error occurs
  * */
 const SessionEndedRequestHandler = {
     canHandle(handlerInput) {
@@ -133,8 +139,8 @@ const SessionEndedRequestHandler = {
 };
 /* *
  * The intent reflector is used for interaction model testing and debugging.
- * It will simply repeat the intent the user said. You can create custom handlers for your intents 
- * by defining them above, then also adding them to the request handler chain below 
+ * It will simply repeat the intent the user said. You can create custom handlers for your intents
+ * by defining them above, then also adding them to the request handler chain below
  * */
 const IntentReflectorHandler = {
     canHandle(handlerInput) {
@@ -153,7 +159,7 @@ const IntentReflectorHandler = {
 /**
  * Generic error handling to capture any syntax or routing errors. If you receive an error
  * stating the request handler chain is not found, you have not implemented a handler for
- * the intent being invoked or included it in the skill builder below 
+ * the intent being invoked or included it in the skill builder below
  * */
 const ErrorHandler = {
     canHandle() {
@@ -170,16 +176,27 @@ const ErrorHandler = {
     }
 };
 
+const getGhostName = (handlerInput) => {
+    const ghostSlot = handlerInput.requestEnvelope.request.intent.slots[GHOST_SLOT];
+
+    let ghostName = '';
+    if (ghostSlot && ghostSlot.value) {
+        ghostName = ghostSlot.value.toLowerCase();
+    }
+
+    return ghostName;
+}
+
 /**
  * This handler acts as the entry point for your skill, routing all request and response
  * payloads to the handlers above. Make sure any new handlers or interceptors you've
- * defined are included below. The order matters - they're processed top to bottom 
+ * defined are included below. The order matters - they're processed top to bottom
  * */
 exports.handler = Alexa.SkillBuilders.custom()
     .addRequestHandlers(
         LaunchRequestHandler,
-        HelloWorldIntentHandler,
         NameResultIntentHandler,
+        GhostDescriptionIntentHandler,
         HelpIntentHandler,
         CancelAndStopIntentHandler,
         FallbackIntentHandler,

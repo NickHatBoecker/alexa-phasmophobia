@@ -63,7 +63,7 @@ const GhostDescriptionIntentHandler = {
 
         let speakOutput = 'Tut mir leid, diesen Geist kenne ich nicht';
         try {
-            speakOutput = Skill.ghosts.find(x => x.name.toLowerCase() === ghostName).nameResult;
+            speakOutput = Skill.ghosts.find(x => x.name.toLowerCase() === ghostName).description;
         } catch (e) {
             // do nothing
         }

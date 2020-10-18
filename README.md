@@ -36,14 +36,21 @@ Du hast einen Beweis gefunden und möchtest wissen welche Geister noch im Rennen
 Alexa frag Geister Journal welcher Geist macht {BEWEIS}
 Alexa frag Geister Journal welcher Geist hat {BEWEIS}
 Alexa frag Geister Journal welcher Geist hinterlässt {BEWEIS}
-Alexa frag Geister Journal welcher Geist sorgt für {BEWEIS}"
-Alexa frag Geister Journal welcher Geist reagiert auf {BEWEIS}"
+Alexa frag Geister Journal welcher Geist sorgt für {BEWEIS}
+Alexa frag Geister Journal welcher Geist reagiert auf {BEWEIS}
 
 Alexa frag Geister Journal welcher Geist spricht über die Geisterbox
 Alexa frag Geister Journal welcher Geist schreibt ins Geisterbuch
 Alexa frag Geister Journal welcher Geist schreibt in das Buch
 Alexa frag Geister Journal welcher Geist schreibt in das Geisterbuch
 Alexa frag Geister Journal welcher Geist schreibt ins Buch
+```
+
+**Beispiele:**
+
+```
+Alexa frag Geister Journal welcher Geist hinterlässt Fingerabdrücke?
+Alexa frag Geister Journal welcher Geist reagiert auf die Geisterbox?
 ```
 
 ### 2. Drei Geister-Beweise
@@ -55,14 +62,29 @@ Alexa sag Geister Journal ich habe {GEIST}
 Alexa sag Geister Journal wir haben {GEIST}
 ```
 
+**Beispiele:**
+
+```
+Alexa sag Geister Journal es ist das Phantom
+Alexa sag Geister Journal wir haben einen Dämon
+```
+
 ### 3. Geister-Beschreibung
 
 Lass dir Stärken und Schwächen zum Geist erzählen.
 
 ```
+Alexa frag Geister Journal woran erkennt man {GEIST}
+Alexa frag Geister Journal was spricht für {GEIST}
+Alexa frag Geister Journal was macht {GEIST} aus
 Alexa frag Geister Journal Beschreibung {GEIST}
 Alexa frag Geister Journal {GEIST}
-Alexa frag Geister Journal woran erkennt man {GEIST}
-Alexa frag Geister Journal was macht {GEIST} aus
-Alexa frag Geister Journal was spricht für {GEIST}
+```
+
+**Beispiele:**
+
+```
+Alexa frag Geister Journal woran erkennt man die Banshee
+Alexa frag Geister Journal was für ein Gespenst
+Alexa frag Geister Journal Spirit
 ```

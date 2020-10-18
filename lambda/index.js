@@ -57,7 +57,7 @@ const NameResult = {
         
         let speakOutput = 'Tut mir leid, diesen Geist kenne ich nicht';
         try {
-            speakOutput = Skill.ghosts.find(x => x.name === ghostName).nameResult;
+            speakOutput = Skill.ghosts.find(x => x.name.toLowerCase() === ghostName).nameResult;
         } catch (e) {
             // do nothing
         }

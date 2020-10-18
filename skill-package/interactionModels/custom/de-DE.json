@@ -1,0 +1,254 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "geister journal",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "name": "GhostTrace",
+          "slots": [
+            {
+              "name": "beweis",
+              "type": "beweis"
+            }
+          ],
+          "samples": [
+            "welcher Geist macht {beweis}",
+            "welcher Geist hat {beweis}",
+            "welcher Geist hinterlässt {beweis}",
+            "welcher Geist sorgt für {beweis}"
+          ]
+        },
+        {
+          "name": "GhostResponse",
+          "slots": [
+            {
+              "name": "beweis",
+              "type": "beweis"
+            }
+          ],
+          "samples": [
+            "welcher Geist spricht über die Geisterbox",
+            "welcher Geist schreibt ins Geisterbuch",
+            "welcher Geist schreibt in das Buch",
+            "welcher Geist schreibt in das Geisterbuch",
+            "welcher Geist schreibt ins Buch",
+            "welcher Geist reagiert auf {beweis}"
+          ]
+        },
+        {
+          "name": "GhostDescription",
+          "slots": [
+            {
+              "name": "geist",
+              "type": "geist"
+            }
+          ],
+          "samples": [
+            "beschreibung {geist}",
+            "{geist}",
+            "woran erkennt man {geist}",
+            "woran erkennt man das {geist}",
+            "woran erkennt man die {geist}",
+            "woran erkennt man den {geist}",
+            "was macht das {geist} aus",
+            "was macht die {geist} aus",
+            "was macht den {geist} aus",
+            "was spricht für {geist}"
+          ]
+        },
+        {
+          "name": "NameResult",
+          "slots": [
+            {
+              "name": "geist",
+              "type": "geist"
+            }
+          ],
+          "samples": [
+            "ich habe das {geist}",
+            "ich habe die {geist}",
+            "ich habe den {geist}",
+            "wir haben das {geist}",
+            "wir haben die {geist}",
+            "wir haben den {geist}",
+            "es ist eine {geist}",
+            "es ist ein {geist}",
+            "ich habe ein {geist}",
+            "ich habe eine {geist}",
+            "ich habe einen {geist}",
+            "wir haben ein {geist}",
+            "wir haben eine {geist}",
+            "wir haben einen {geist}",
+            "es ist {geist}",
+            "es ist das {geist}",
+            "es ist die {geist}",
+            "es ist der {geist}"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "value": "Geisterbox"
+              }
+            },
+            {
+              "name": {
+                "value": "EMF Reader Level 5"
+              }
+            },
+            {
+              "name": {
+                "value": "EMF Level 5"
+              }
+            },
+            {
+              "name": {
+                "value": "EMF"
+              }
+            },
+            {
+              "name": {
+                "value": "Temperaturen"
+              }
+            },
+            {
+              "name": {
+                "value": "Gefriertemperaturen"
+              }
+            },
+            {
+              "name": {
+                "value": "Geisterorbs"
+              }
+            },
+            {
+              "name": {
+                "value": "Geisterorb"
+              }
+            },
+            {
+              "name": {
+                "value": "Geisterkugeln"
+              }
+            },
+            {
+              "name": {
+                "value": "Geisterkugel"
+              }
+            },
+            {
+              "name": {
+                "value": "Geisterbuch"
+              }
+            },
+            {
+              "name": {
+                "value": "Fingerabdruck"
+              }
+            },
+            {
+              "name": {
+                "value": "Fingerabdrücke"
+              }
+            }
+          ],
+          "name": "beweis"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "Poltergeist"
+              }
+            },
+            {
+              "name": {
+                "value": "Yurei"
+              }
+            },
+            {
+              "name": {
+                "value": "Revenant"
+              }
+            },
+            {
+              "name": {
+                "value": "Banshee"
+              }
+            },
+            {
+              "name": {
+                "value": "Mare"
+              }
+            },
+            {
+              "name": {
+                "value": "Dschinn"
+              }
+            },
+            {
+              "name": {
+                "value": "Spirit"
+              }
+            },
+            {
+              "name": {
+                "value": "Shade"
+              }
+            },
+            {
+              "name": {
+                "value": "Oni"
+              }
+            },
+            {
+              "name": {
+                "value": "Dämon"
+              }
+            },
+            {
+              "name": {
+                "value": "Gespenst"
+              }
+            },
+            {
+              "name": {
+                "value": "Phantom"
+              }
+            }
+          ],
+          "name": "geist"
+        }
+      ],
+      "modelConfiguration": {
+        "fallbackIntentSensitivity": {
+          "level": "LOW"
+        }
+      }
+    }
+  },
+  "version": "4"
+}

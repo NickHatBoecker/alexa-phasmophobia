@@ -38,7 +38,7 @@ const HelloWorldIntentHandler = {
 /**
  * Numerate proofs for given ghost
  */
-const NameResult = {
+const NameResultIntentHandler = {
     canHandle(handlerInput) {
         const type = handlerInput.requestEnvelope.request.type;
         const intentName = handlerInput.requestEnvelope.request.intent.name;
@@ -179,6 +179,7 @@ exports.handler = Alexa.SkillBuilders.custom()
     .addRequestHandlers(
         LaunchRequestHandler,
         HelloWorldIntentHandler,
+        NameResultIntentHandler,
         HelpIntentHandler,
         CancelAndStopIntentHandler,
         FallbackIntentHandler,
@@ -186,5 +187,5 @@ exports.handler = Alexa.SkillBuilders.custom()
         IntentReflectorHandler)
     .addErrorHandlers(
         ErrorHandler)
-    .withCustomUserAgent('sample/hello-world/v1.2')
+    .withCustomUserAgent('nhb/phasmophobia/v0.0.1')
     .lambda();

@@ -64,16 +64,36 @@
             }
           ],
           "samples": [
-            "beschreibung {geist}",
             "{geist}",
+            "beschreibung {geist}",
+            "nach beschreibung {geist}",
+            "nach beschreibung für {geist}",
+            "nach beschreibung für das {geist}",
+            "nach beschreibung für ein {geist}",
+            "nach beschreibung für die {geist}",
+            "nach beschreibung für eine {geist}",
+            "nach beschreibung für den {geist}",
+            "nach beschreibung für einen {geist}",
             "woran erkennt man {geist}",
             "woran erkennt man das {geist}",
+            "woran erkennt man ein {geist}",
             "woran erkennt man die {geist}",
+            "woran erkennt man eine {geist}",
             "woran erkennt man den {geist}",
+            "woran erkennt man einen {geist}",
             "was macht das {geist} aus",
+            "was macht ein {geist} aus",
             "was macht die {geist} aus",
+            "was macht eine {geist} aus",
             "was macht den {geist} aus",
-            "was spricht für {geist}"
+            "was macht einen {geist} aus",
+            "was spricht für {geist}",
+            "was spricht für das {geist}",
+            "was spricht für ein {geist}",
+            "was spricht für den {geist}",
+            "was spricht für einen {geist}",
+            "was spricht für die {geist}"
+            "was spricht für eine {geist}"
           ]
         },
         {

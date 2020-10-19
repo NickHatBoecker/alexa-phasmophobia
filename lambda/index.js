@@ -34,7 +34,7 @@ const NameResultIntentHandler = {
         return type === 'IntentRequest' && intentName === 'NameResult';
     },
     handle (handlerInput) {
-        const ghostName = getGhostName(handlerInput, GHOST_SLOT);
+        const ghostName = getName(handlerInput, GHOST_SLOT);
 
         let speakOutput = 'Tut mir leid, diesen Geist kenne ich nicht.';
         try {
@@ -60,7 +60,7 @@ const GhostDescriptionIntentHandler = {
         return type === 'IntentRequest' && intentName === 'GhostDescription';
     },
     handle (handlerInput) {
-        const ghostName = getGhostName(handlerInput, GHOST_SLOT);
+        const ghostName = getName(handlerInput, GHOST_SLOT);
 
         let speakOutput = 'Tut mir leid, diesen Geist kenne ich nicht.';
         try {
@@ -86,7 +86,7 @@ const GhostResponseIntentHandler = {
         return type === 'IntentRequest' && intentName === 'GhostResponse';
     },
     handle (handlerInput) {
-        const proofName = getProofName(handlerInput, PROOF_SLOT);
+        const proofName = getName(handlerInput, PROOF_SLOT);
 
         let speakOutput = 'Tut mir leid, diesen Beweis kenne ich nicht.';
         try {

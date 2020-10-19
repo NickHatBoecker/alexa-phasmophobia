@@ -14,7 +14,7 @@ module.exports.ghosts = [
     {
         name: "Dämon",
         description: "Ein Dämon ist mit einer der schlimmsten Geister, die man finden kann. Er ist bekannt dafür, ohne Sinn und Verstand anzugreifen. Stärken: Dämonen greifen viel öfter an, als andere Geister. Schwächen: Erfolgreiche Befragungen des Ouija-Boards über den Dämon verringern nicht den Geisterzustand.",
-        nameResult: "Für den Dämon musst du die Geisterbox, das Geisterbuch und Gefriertemperaturen in das <lang xml:lang=\"en-GB\">Journal</lang> eintragen.",
+        nameResult: "Für den Dämon musst du die Geister-Box, das Geisterbuch und Gefriertemperaturen in das <lang xml:lang=\"en-GB\">Journal</lang> eintragen.",
         respondsToEmf: 0,
         respondsToGhostbox: 1,
         respondsToGhostbook: 1,
@@ -26,7 +26,7 @@ module.exports.ghosts = [
     {
         name: "Dschinn",
         description: "Ein Dschinn ist ein territorialer Geist der bei Bedrängnis angreift. Er ist ebenfalls bekannt dafür, sich mit hoher Geschwindigkeit zu bewegen. Stärken: Ein Dschinn bewegt sich schneller wenn sein Opfer weit weg ist. Schwächen: Dem Ort seinen Strom zu entziehen hindert den Dschinn am nutzen seiner Fähigkeiten.",
-        nameResult: "Für den Dschinn musst du EMF-Level 5, die Geisterbox und die Geisterkugeln in das <lang xml:lang=\"en-GB\">Journal</lang> eintragen.",
+        nameResult: "Für den Dschinn musst du EMF-Level 5, die Geister-Box und die Geisterkugeln in das <lang xml:lang=\"en-GB\">Journal</lang> eintragen.",
         respondsToEmf: 1,
         respondsToGhostbox: 1,
         respondsToGhostbook: 0,
@@ -38,7 +38,7 @@ module.exports.ghosts = [
     {
         name: "Gespenst",
         description: "Ein Gespenst ist einer der gefährlichsten Geister, die Sie finden werden. Er ist auch bekannt als der Geist, der fliegen und durch Wände gehen kann. Stärken: Ein Gespenst berührt nie den Boden wodurch er nicht durch Fußabdrücke gefunden werden kann. Schwächen: Giftige Reaktion zu Salz.",
-        nameResult: "Für das Gespenst musst du die Geisterbox, Fingerabdrücke und Gefriertemperaturen in das <lang xml:lang=\"en-GB\">Journal</lang> eintragen.",
+        nameResult: "Für das Gespenst musst du die Geister-Box, Fingerabdrücke und Gefriertemperaturen in das <lang xml:lang=\"en-GB\">Journal</lang> eintragen.",
         respondsToEmf: 0,
         respondsToGhostbox: 1,
         respondsToGhostbook: 0,
@@ -86,7 +86,7 @@ module.exports.ghosts = [
     {
         name: "Poltergeist",
         description: "Einer der berühmtesten Geister. Ein Poltergeist ist bekannt als ein Wesen das laut ist und Objekte um sich herum manipuliert um seinen Opfern Angst einzujagen. Stärken: Ein Poltergeist kann viele Objekte auf einmal werfen. Schwächen: Ein Poltergeist ist in einem leeren Raum fast ineffektiv.",
-        nameResult: "Für den Poltergeist musst du die Geisterbox, die Geisterkugeln und Fingerabdrücke in das <lang xml:lang=\"en-GB\">Journal</lang> eintragen.",
+        nameResult: "Für den Poltergeist musst du die Geister-Box, die Geisterkugeln und Fingerabdrücke in das <lang xml:lang=\"en-GB\">Journal</lang> eintragen.",
         respondsToEmf: 0,
         respondsToGhostbox: 1,
         respondsToGhostbook: 0,
@@ -122,7 +122,7 @@ module.exports.ghosts = [
     {
         name: "Spirit",
         description: "Der <lang xml:lang=\"en-GB\">Spirit</lang> ist eine der gewöhnlichsten Geisterarten, jedoch ist er sehr stark und gefährlich. Sie werden für gewöhnlich in einem Gebiet gefunden in dem der Tod einer Person unaufgeklärt blieb. Stärken: Keine. Schwächen: Kann vorübergehend gestoppt werden, indem man den Geisterraum ausräuchert.",
-        nameResult: "Für den <lang xml:lang=\"en-GB\">Spirit</lang> musst du die Geisterbox, das Geisterbuch und Fingerabdrücke in das <lang xml:lang=\"en-GB\">Journal</lang> eintragen.",
+        nameResult: "Für den <lang xml:lang=\"en-GB\">Spirit</lang> musst du die Geister-Box, das Geisterbuch und Fingerabdrücke in das <lang xml:lang=\"en-GB\">Journal</lang> eintragen.",
         respondsToEmf: 0,
         respondsToGhostbox: 1,
         respondsToGhostbook: 1,
@@ -134,7 +134,7 @@ module.exports.ghosts = [
     {
         name: "Yurei",
         description: "Ein Yurei ist ein Geist der in die physische Welt zurückkehrte, aus Gründen des Hasses oder einer unerfüllten Rache. Stärken: Yureis haben einen stärkeren Einfluss auf den Geisteszustand von Menschen. Schwächen: Wenn Sie den Raum des Yurei ausräuchern, wird er für längere Zeit seine Bewegung einstellen.",
-        nameResult: "Für den Yurei musst du die Geisterbox, das Geisterbuch und Gefriertemperaturen in das <lang xml:lang=\"en-GB\">Journal</lang> eintragen.",
+        nameResult: "Für den Yurei musst du die Geister-Box, das Geisterbuch und Gefriertemperaturen in das <lang xml:lang=\"en-GB\">Journal</lang> eintragen.",
         respondsToEmf: 0,
         respondsToGhostbox: 1,
         respondsToGhostbook: 1,

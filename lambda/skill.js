@@ -1,7 +1,7 @@
 module.exports.ghosts = [
     {
         name: "Banshee",
-        description: "Die <lang xml:lang=\"en-GB\">Banshee</lang> ist ein Jäger und wird alles attackieren. Sie ist bekannt seine Opfer zu stalken bis es jemanden tötet. Stärken: Eine <lang xml:lang=\"en-GB\">Banshee</lang> wird jeweils nur eine Person jagen. Schwächen: <lang xml:lang=\"en-GB\">Banshee</lang> fürchten das Kruzifix und sind weniger aggressiv in seinem Umkreis.",
+        description: "Die <lang xml:lang=\"en-GB\">Banshee</lang> ist ein Jäger und wird alles attackieren. Sie ist bekannt seine Opfer zu stalken bis es jemanden tötet. <break strength=\"strong\" />Stärken: Eine <lang xml:lang=\"en-GB\">Banshee</lang> wird jeweils nur eine Person jagen. <break strength=\"strong\" />Schwächen: <lang xml:lang=\"en-GB\">Banshee</lang> fürchten das Kruzifix und sind weniger aggressiv in seinem Umkreis.",
         nameResult: "Für die <lang xml:lang=\"en-GB\">Banshee</lang> musst du EMF-Level 5, Fingerabdrücke und Gefriertemperaturen in das <lang xml:lang=\"en-GB\">Journal</lang> eintragen.",
         respondsToEmf: 1,
         respondsToGhostbox: 0,
@@ -13,7 +13,7 @@ module.exports.ghosts = [
     },
     {
         name: "Dämon",
-        description: "Ein Dämon ist mit einer der schlimmsten Geister, die man finden kann. Er ist bekannt dafür, ohne Sinn und Verstand anzugreifen. Stärken: Dämonen greifen viel öfter an, als andere Geister. Schwächen: Erfolgreiche Befragungen des Ouija-Boards über den Dämon verringern nicht den Geisterzustand.",
+        description: "Ein Dämon ist mit einer der schlimmsten Geister, die man finden kann. Er ist bekannt dafür, ohne Sinn und Verstand anzugreifen. <break strength=\"strong\" />Stärken: Dämonen greifen viel öfter an, als andere Geister. <break strength=\"strong\" />Schwächen: Erfolgreiche Befragungen des Ouija-Boards über den Dämon verringern nicht den Geisterzustand.",
         nameResult: "Für den Dämon musst du die Geister-Box, das Geisterbuch und Gefriertemperaturen in das <lang xml:lang=\"en-GB\">Journal</lang> eintragen.",
         respondsToEmf: 0,
         respondsToGhostbox: 1,
@@ -25,7 +25,7 @@ module.exports.ghosts = [
     },
     {
         name: "Dschinn",
-        description: "Ein Dschinn ist ein territorialer Geist der bei Bedrängnis angreift. Er ist ebenfalls bekannt dafür, sich mit hoher Geschwindigkeit zu bewegen. Stärken: Ein Dschinn bewegt sich schneller wenn sein Opfer weit weg ist. Schwächen: Dem Ort seinen Strom zu entziehen hindert den Dschinn am nutzen seiner Fähigkeiten.",
+        description: "Ein Dschinn ist ein territorialer Geist der bei Bedrängnis angreift. Er ist ebenfalls bekannt dafür, sich mit hoher Geschwindigkeit zu bewegen. <break strength=\"strong\" />Stärken: Ein Dschinn bewegt sich schneller wenn sein Opfer weit weg ist. <break strength=\"strong\" />Schwächen: Dem Ort seinen Strom zu entziehen hindert den Dschinn am nutzen seiner Fähigkeiten.",
         nameResult: "Für den Dschinn musst du EMF-Level 5, die Geister-Box und die Geisterkugeln in das <lang xml:lang=\"en-GB\">Journal</lang> eintragen.",
         respondsToEmf: 1,
         respondsToGhostbox: 1,
@@ -37,7 +37,7 @@ module.exports.ghosts = [
     },
     {
         name: "Gespenst",
-        description: "Ein Gespenst ist einer der gefährlichsten Geister, die Sie finden werden. Er ist auch bekannt als der Geist, der fliegen und durch Wände gehen kann. Stärken: Ein Gespenst berührt nie den Boden wodurch er nicht durch Fußabdrücke gefunden werden kann. Schwächen: Giftige Reaktion zu Salz.",
+        description: "Ein Gespenst ist einer der gefährlichsten Geister, die Sie finden werden. Er ist auch bekannt als der Geist, der fliegen und durch Wände gehen kann. <break strength=\"strong\" />Stärken: Ein Gespenst berührt nie den Boden wodurch er nicht durch Fußabdrücke gefunden werden kann. <break strength=\"strong\" />Schwächen: Giftige Reaktion zu Salz.",
         nameResult: "Für das Gespenst musst du die Geister-Box, Fingerabdrücke und Gefriertemperaturen in das <lang xml:lang=\"en-GB\">Journal</lang> eintragen.",
         respondsToEmf: 0,
         respondsToGhostbox: 1,
@@ -49,7 +49,7 @@ module.exports.ghosts = [
     },
     {
         name: "Mare",
-        description: "Eine <lang xml:lang=\"en-GB\">Mare</lang> ist die Quelle von allen Albträumen. Sie wird bei Nacht am stärksten. Es wird erzählt, dass eine <lang xml:lang=\"en-GB\">Mare</lang> den Verstand von Menschen kontrollieren kann. Stärken: Eine <lang xml:lang=\"en-GB\">Mare</lang> hat eine erhöhte Chance anzugreifen wenn sie sich im Dunkeln aufhalten. Schwächen: Schaltet man die Lichter, um eine <lang xml:lang=\"en-GB\">Mare</lang> herum, ein ist die Chance angegriffen zu werden eher gering.",
+        description: "Eine <lang xml:lang=\"en-GB\">Mare</lang> ist die Quelle von allen Albträumen. Sie wird bei Nacht am stärksten. Es wird erzählt, dass eine <lang xml:lang=\"en-GB\">Mare</lang> den Verstand von Menschen kontrollieren kann. <break strength=\"strong\" />Stärken: Eine <lang xml:lang=\"en-GB\">Mare</lang> hat eine erhöhte Chance anzugreifen wenn sie sich im Dunkeln aufhalten. <break strength=\"strong\" />Schwächen: Schaltet man die Lichter, um eine <lang xml:lang=\"en-GB\">Mare</lang> herum, ein ist die Chance angegriffen zu werden eher gering.",
         nameResult: "Für die <lang xml:lang=\"en-GB\">Mare</lang> musst du das Geisterbuch, die Geisterkugeln und Gefriertemperaturen in das <lang xml:lang=\"en-GB\">Journal</lang> eintragen.",
         respondsToEmf: 0,
         respondsToGhostbox: 0,
@@ -61,7 +61,7 @@ module.exports.ghosts = [
     },
     {
         name: "Oni",
-        description: "Onis sind Verwandte des Dämons und besitzen unglaubliche Stärke. Gerüchten zufolge sind sie aktiver in der Nähe ihres Opfers. Stärken: Onis bewegen Objekte mit großer Geschwindigkeit und sind aktiver wenn Leute in der Nähe sind. Schwächen: Durch ihre hohe Aktivitätsrate sind Onis leichter zu erkennen.",
+        description: "Onis sind Verwandte des Dämons und besitzen unglaubliche Stärke. Gerüchten zufolge sind sie aktiver in der Nähe ihres Opfers. <break strength=\"strong\" />Stärken: Onis bewegen Objekte mit großer Geschwindigkeit und sind aktiver wenn Leute in der Nähe sind. <break strength=\"strong\" />Schwächen: Durch ihre hohe Aktivitätsrate sind Onis leichter zu erkennen.",
         nameResult: "Für den Oni musst du das Geisterbuch, die Geisterkugeln und Gefriertemperaturen in das <lang xml:lang=\"en-GB\">Journal</lang> eintragen.",
         respondsToEmf: 1,
         respondsToGhostbox: 1,
@@ -73,7 +73,7 @@ module.exports.ghosts = [
     },
     {
         name: 'Phantom',
-        description: "Ein Phantom ist ein Geist, der von den Lebenden Besitz ergreifen kann. Meistens beschworen durch das Ouija-Board. Verursacht Angst in den Menschen um ihn herum. Stärken: Senkt Ihren Verstand stark wenn Sie das Phantom anschauen. Schwächen: Fotografieren Sie das Phantom, verschwindet es temporär.",
+        description: "Ein Phantom ist ein Geist, der von den Lebenden Besitz ergreifen kann. Meistens beschworen durch das Ouija-Board. Verursacht Angst in den Menschen um ihn herum. <break strength=\"strong\" />Stärken: Senkt Ihren Verstand stark wenn Sie das Phantom anschauen. <break strength=\"strong\" />Schwächen: Fotografieren Sie das Phantom, verschwindet es temporär.",
         nameResult: 'Für das Phantom musst du EMF-Level 5, die Geisterkugeln und Gefriertemperaturen in das <lang xml:lang=\"en-GB\">Journal</lang> eintragen.',
         respondsToEmf: 1,
         respondsToGhostbox: 0,
@@ -85,7 +85,7 @@ module.exports.ghosts = [
     },
     {
         name: "Poltergeist",
-        description: "Einer der berühmtesten Geister. Ein Poltergeist ist bekannt als ein Wesen das laut ist und Objekte um sich herum manipuliert um seinen Opfern Angst einzujagen. Stärken: Ein Poltergeist kann viele Objekte auf einmal werfen. Schwächen: Ein Poltergeist ist in einem leeren Raum fast ineffektiv.",
+        description: "Einer der berühmtesten Geister. Ein Poltergeist ist bekannt als ein Wesen das laut ist und Objekte um sich herum manipuliert um seinen Opfern Angst einzujagen. <break strength=\"strong\" />Stärken: Ein Poltergeist kann viele Objekte auf einmal werfen. <break strength=\"strong\" />Schwächen: Ein Poltergeist ist in einem leeren Raum fast ineffektiv.",
         nameResult: "Für den Poltergeist musst du die Geister-Box, die Geisterkugeln und Fingerabdrücke in das <lang xml:lang=\"en-GB\">Journal</lang> eintragen.",
         respondsToEmf: 0,
         respondsToGhostbox: 1,
@@ -97,7 +97,7 @@ module.exports.ghosts = [
     },
     {
         name: "Revenant",
-        description: "Ein <lang xml:lang=\"en-GB\">Revenant</lang> ist langsam, aber attackiert heftig und wahllos. Gerüchten zufolge ist ein <lang xml:lang=\"en-GB\">Revenant</lang> schneller, wenn er jemanden jagt. Stärken: Wird schneller wenn er sein Opfer jagt. Schwächen: Versteckt man sich vor dem <lang xml:lang=\"en-GB\">Revenant</lang>, bewegt er sich sehr langsam.",
+        description: "Ein <lang xml:lang=\"en-GB\">Revenant</lang> ist langsam, aber attackiert heftig und wahllos. Gerüchten zufolge ist ein <lang xml:lang=\"en-GB\">Revenant</lang> schneller, wenn er jemanden jagt. <break strength=\"strong\" />Stärken: Wird schneller wenn er sein Opfer jagt. <break strength=\"strong\" />Schwächen: Versteckt man sich vor dem <lang xml:lang=\"en-GB\">Revenant</lang>, bewegt er sich sehr langsam.",
         nameResult: "Für den <lang xml:lang=\"en-GB\">Revenant</lang> musst du EMF-Level 5, das Geisterbuch und Fingerabdrücke in das <lang xml:lang=\"en-GB\">Journal</lang> eintragen.",
         respondsToEmf: 1,
         respondsToGhostbox: 0,
@@ -109,7 +109,7 @@ module.exports.ghosts = [
     },
     {
         name: "Shade",
-        description: "Der <lang xml:lang=\"en-GB\">Shade</lang> ist bekannt als ein schüchterner Geist. Wenn mehrere Menschen zusammen sind, werden alle paranormale Aktivitäten gestoppt. Stärken: Schüchtern zu sein bedeutet es wird schwerer den Geist zu entdecken. Schwächen: Der Geist wird nicht jagen wenn mehrere Menschen zusammen sind.",
+        description: "Der <lang xml:lang=\"en-GB\">Shade</lang> ist bekannt als ein schüchterner Geist. Wenn mehrere Menschen zusammen sind, werden alle paranormale Aktivitäten gestoppt. <break strength=\"strong\" />Stärken: Schüchtern zu sein bedeutet es wird schwerer den Geist zu entdecken. <break strength=\"strong\" />Schwächen: Der Geist wird nicht jagen wenn mehrere Menschen zusammen sind.",
         nameResult: "Für den <lang xml:lang=\"en-GB\">Shade</lang> musst du EMF-Level 5, das Geisterbuch und Fingerabdrücke in das <lang xml:lang=\"en-GB\">Journal</lang> eintragen.",
         respondsToEmf: 1,
         respondsToGhostbox: 0,
@@ -121,7 +121,7 @@ module.exports.ghosts = [
     },
     {
         name: "Spirit",
-        description: "Der <lang xml:lang=\"en-GB\">Spirit</lang> ist eine der gewöhnlichsten Geisterarten, jedoch ist er sehr stark und gefährlich. Sie werden für gewöhnlich in einem Gebiet gefunden in dem der Tod einer Person unaufgeklärt blieb. Stärken: Keine. Schwächen: Kann vorübergehend gestoppt werden, indem man den Geisterraum ausräuchert.",
+        description: "Der <lang xml:lang=\"en-GB\">Spirit</lang> ist eine der gewöhnlichsten Geisterarten, jedoch ist er sehr stark und gefährlich. Sie werden für gewöhnlich in einem Gebiet gefunden in dem der Tod einer Person unaufgeklärt blieb. <break strength=\"strong\" />Stärken: Keine. <break strength=\"strong\" />Schwächen: Kann vorübergehend gestoppt werden, indem man den Geisterraum ausräuchert.",
         nameResult: "Für den <lang xml:lang=\"en-GB\">Spirit</lang> musst du die Geister-Box, das Geisterbuch und Fingerabdrücke in das <lang xml:lang=\"en-GB\">Journal</lang> eintragen.",
         respondsToEmf: 0,
         respondsToGhostbox: 1,
@@ -133,7 +133,7 @@ module.exports.ghosts = [
     },
     {
         name: "Yurei",
-        description: "Ein Yurei ist ein Geist der in die physische Welt zurückkehrte, aus Gründen des Hasses oder einer unerfüllten Rache. Stärken: Yureis haben einen stärkeren Einfluss auf den Geisteszustand von Menschen. Schwächen: Wenn Sie den Raum des Yurei ausräuchern, wird er für längere Zeit seine Bewegung einstellen.",
+        description: "Ein Yurei ist ein Geist der in die physische Welt zurückkehrte, aus Gründen des Hasses oder einer unerfüllten Rache. <break strength=\"strong\" />Stärken: Yureis haben einen stärkeren Einfluss auf den Geisteszustand von Menschen. <break strength=\"strong\" />Schwächen: Wenn Sie den Raum des Yurei ausräuchern, wird er für längere Zeit seine Bewegung einstellen.",
         nameResult: "Für den Yurei musst du die Geister-Box, das Geisterbuch und Gefriertemperaturen in das <lang xml:lang=\"en-GB\">Journal</lang> eintragen.",
         respondsToEmf: 0,
         respondsToGhostbox: 1,

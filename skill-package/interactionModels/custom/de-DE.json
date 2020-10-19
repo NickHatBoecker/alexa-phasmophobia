@@ -70,10 +70,20 @@
         {
           "name": "GhostResponseBox",
           "samples": [
+            "welcher Geist kommuniziert über die Geisterbox",
+            "welcher Geist kommuniziert über die Box",
+            "welcher Geist kommuniziert über Box",
             "welcher Geist spricht über die Geisterbox",
+            "welcher Geist spricht über die Box",
             "welcher Geist spricht über Geisterbox",
+            "welcher Geist spricht über Box",
             "welcher Geist über die Geisterbox spricht",
-            "welcher Geist über Geisterbox spricht"
+            "welcher Geist über die Box spricht",
+            "welcher Geist über die Box kommuniziert",
+            "welcher Geist über Geisterbox spricht",
+            "welcher Geist über Geisterbox kommuniziert",
+            "welcher Geist über Box spricht",
+            "welcher Geist über Box kommuniziert"
           ]
         },
         {

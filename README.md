@@ -2,7 +2,8 @@
 
 Inoffizieller Alexa Skill zum Videospiel [Phasmophobia](https://store.steampowered.com/app/739630/Phasmophobia/). Frag Alexa zu den Geistern aus, frag um welchen Geist es sich anhand der gefundenen Beweise handeln könnte und lass dir alle Merkmale zu einem Geist aufzählen, um sie im Journal zu notieren.
 
-Prima für Leute, die allein spielen und während der Geisterjagd keine Zeit haben ins Journal zu schauen.
+- Prima für Leute, die allein spielen und während der Geisterjagd keine Zeit haben ins Journal zu schauen.
+- Oder um in der Lobby auf die Informationen aus dem Journal zuzugreifen, was im Spiel selber nicht möglich ist. 
 
 ## Installation
 

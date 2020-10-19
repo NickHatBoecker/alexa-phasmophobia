@@ -34,10 +34,13 @@ const NameResultIntentHandler = {
         return type === 'IntentRequest' && intentName === 'NameResult';
     },
     handle (handlerInput) {
-        const ghostName = getName(handlerInput, GHOST_SLOT);
-
         let speakOutput = 'Tut mir leid, diesen Geist kenne ich nicht.';
+
         try {
+            const ghostName = getName(handlerInput, GHOST_SLOT);
+            if (!ghostName) {
+                throw "Ghost not found"
+            }
             speakOutput = Skill.ghosts.find(x => x.name.toLowerCase() === ghostName).nameResult;
         } catch (e) {
             // do nothing
@@ -60,10 +63,13 @@ const GhostDescriptionIntentHandler = {
         return type === 'IntentRequest' && intentName === 'GhostDescription';
     },
     handle (handlerInput) {
-        const ghostName = getName(handlerInput, GHOST_SLOT);
-
         let speakOutput = 'Tut mir leid, diesen Geist kenne ich nicht.';
+
         try {
+            const ghostName = getName(handlerInput, GHOST_SLOT);
+            if (!ghostName) {
+                throw "Ghost not found"
+            }
             speakOutput = Skill.ghosts.find(x => x.name.toLowerCase() === ghostName).description;
         } catch (e) {
             // do nothing
@@ -86,15 +92,75 @@ const GhostResponseIntentHandler = {
         return type === 'IntentRequest' && intentName === 'GhostResponse';
     },
     handle (handlerInput) {
-        const proofName = getName(handlerInput, PROOF_SLOT);
-
         let speakOutput = 'Tut mir leid, diesen Beweis kenne ich nicht.';
+
         try {
+            const proofName = getName(handlerInput, PROOF_SLOT);
+            if (!proofName) {
+                throw "Proof not found"
+            }
+
             const ghosts = []
             Skill.ghosts.find(ghost => {
                 // TODO add if
                 ghosts.push(ghost.indefiniteArticle)
             })
+
+            if (ghosts.length === 1) {
+                speakOutput = `Es könnte ${ghosts[0]} sein.`
+            } else {
+                speakOutput = `Es könnte ${ghosts.join(', ')} sein.`
+            }
+        } catch (e) {
+            // do nothing
+        }
+
+        return handlerInput.responseBuilder
+        .speak(speakOutput)
+        .getResponse();
+    }
+}
+
+const GhostResponseBookIntentHandler = {
+    canHandle (handlerInput) {
+        const type = handlerInput.requestEnvelope.request.type;
+        const intentName = handlerInput.requestEnvelope.request.intent.name;
+
+        return type === 'IntentRequest' && intentName === 'GhostResponseBook';
+    },
+    handle (handlerInput) {
+        let speakOutput = 'Tut mir leid, ich habe dich nicht verstanden.';
+
+        try {
+            const ghosts = Skill.ghosts.filter(x => x.respondsToGhostbook).map(x => x.indefiniteArticle)
+
+            if (ghosts.length === 1) {
+                speakOutput = `Es könnte ${ghosts[0]} sein.`
+            } else {
+                speakOutput = `Es könnte ${ghosts.join(', ')} sein.`
+            }
+        } catch (e) {
+            // do nothing
+        }
+
+        return handlerInput.responseBuilder
+        .speak(speakOutput)
+        .getResponse();
+    }
+}
+
+const GhostResponseBoxIntentHandler = {
+    canHandle (handlerInput) {
+        const type = handlerInput.requestEnvelope.request.type;
+        const intentName = handlerInput.requestEnvelope.request.intent.name;
+
+        return type === 'IntentRequest' && intentName === 'GhostResponseBox';
+    },
+    handle (handlerInput) {
+        let speakOutput = 'Tut mir leid, ich habe dich nicht verstanden.';
+
+        try {
+            const ghosts = Skill.ghosts.filter(x => x.respondsToGhostbox).map(x => x.indefiniteArticle)
 
             if (ghosts.length === 1) {
                 speakOutput = `Es könnte ${ghosts[0]} sein.`
@@ -235,6 +301,8 @@ exports.handler = Alexa.SkillBuilders.custom()
         NameResultIntentHandler,
         GhostDescriptionIntentHandler,
         GhostResponseIntentHandler,
+        GhostResponseBookIntentHandler,
+        GhostResponseBoxIntentHandler,
         HelpIntentHandler,
         CancelAndStopIntentHandler,
         FallbackIntentHandler,

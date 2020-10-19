@@ -48,6 +48,15 @@
           ],
           "samples": [
             "welcher Geist spricht über die Geisterbox",
+            "welcher Geist reagiert auf {beweis}",
+            "welcher Geist reagiert auf das {beweis}",
+            "welcher Geist reagiert auf die {beweis}",
+            "welcher Geist reagiert auf den {beweis}"
+          ]
+        },
+        {
+          "name": "GhostResponseBook",
+          "samples": [
             "welcher Geist in das Geisterbuch schreibt",
             "welcher Geist in das Buch schreibt",
             "welcher Geist ins Buch schreibt",
@@ -55,8 +64,16 @@
             "welcher Geist schreibt ins Geisterbuch",
             "welcher Geist schreibt in das Buch",
             "welcher Geist schreibt in das Geisterbuch",
-            "welcher Geist schreibt ins Buch",
-            "welcher Geist reagiert auf {beweis}"
+            "welcher Geist schreibt ins Buch"
+          ]
+        },
+        {
+          "name": "GhostResponseBox",
+          "samples": [
+            "welcher Geist spricht über die Geisterbox",
+            "welcher Geist spricht über Geisterbox",
+            "welcher Geist über die Geisterbox spricht",
+            "welcher Geist über Geisterbox spricht"
           ]
         },
         {

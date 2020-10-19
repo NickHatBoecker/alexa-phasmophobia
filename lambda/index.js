@@ -7,6 +7,7 @@ const Alexa = require('ask-sdk-core');
 const Skill = require('skill.js');
 
 const GHOST_SLOT = 'geist';
+const PROOF_SLOT = 'beweis';
 
 const LaunchRequestHandler = {
     canHandle(handlerInput) {
@@ -33,9 +34,9 @@ const NameResultIntentHandler = {
         return type === 'IntentRequest' && intentName === 'NameResult';
     },
     handle (handlerInput) {
-        const ghostName = getGhostName(handlerInput);
+        const ghostName = getGhostName(handlerInput, GHOST_SLOT);
 
-        let speakOutput = 'Tut mir leid, diesen Geist kenne ich nicht';
+        let speakOutput = 'Tut mir leid, diesen Geist kenne ich nicht.';
         try {
             speakOutput = Skill.ghosts.find(x => x.name.toLowerCase() === ghostName).nameResult;
         } catch (e) {
@@ -59,9 +60,9 @@ const GhostDescriptionIntentHandler = {
         return type === 'IntentRequest' && intentName === 'GhostDescription';
     },
     handle (handlerInput) {
-        const ghostName = getGhostName(handlerInput);
+        const ghostName = getGhostName(handlerInput, GHOST_SLOT);
 
-        let speakOutput = 'Tut mir leid, diesen Geist kenne ich nicht';
+        let speakOutput = 'Tut mir leid, diesen Geist kenne ich nicht.';
         try {
             speakOutput = Skill.ghosts.find(x => x.name.toLowerCase() === ghostName).description;
         } catch (e) {
@@ -71,6 +72,42 @@ const GhostDescriptionIntentHandler = {
         return handlerInput.responseBuilder
             .speak(speakOutput)
             .getResponse();
+    }
+}
+
+/**
+ * Spill some information about the ghost
+ */
+const GhostResponseIntentHandler = {
+    canHandle (handlerInput) {
+        const type = handlerInput.requestEnvelope.request.type;
+        const intentName = handlerInput.requestEnvelope.request.intent.name;
+
+        return type === 'IntentRequest' && intentName === 'GhostResponse';
+    },
+    handle (handlerInput) {
+        const proofName = getProofName(handlerInput, PROOF_SLOT);
+
+        let speakOutput = 'Tut mir leid, diesen Beweis kenne ich nicht.';
+        try {
+            const ghosts = []
+            Skill.ghosts.find(ghost => {
+                // TODO add if
+                ghosts.push(`${ghost.indefiniteArticle} ${ghost.name}`)
+            })
+
+            if (ghosts.length === 1) {
+                speakOutput = `Es könnte ${ghosts[0]} sein.`
+            } else {
+                speakOutput = `Es könnte ${ghosts.join(', ')} sein.`
+            }
+        } catch (e) {
+            // do nothing
+        }
+
+        return handlerInput.responseBuilder
+        .speak(speakOutput)
+        .getResponse();
     }
 }
 
@@ -176,15 +213,15 @@ const ErrorHandler = {
     }
 };
 
-const getGhostName = (handlerInput) => {
-    const ghostSlot = handlerInput.requestEnvelope.request.intent.slots[GHOST_SLOT];
+const getName = (handlerInput, slotName) => {
+    const slot = handlerInput.requestEnvelope.request.intent.slots[slotName];
 
-    let ghostName = '';
-    if (ghostSlot && ghostSlot.value) {
-        ghostName = ghostSlot.value.toLowerCase();
+    let name = '';
+    if (slot && slot.value) {
+        name = slot.value.toLowerCase();
     }
 
-    return ghostName;
+    return name;
 }
 
 /**
@@ -197,6 +234,7 @@ exports.handler = Alexa.SkillBuilders.custom()
         LaunchRequestHandler,
         NameResultIntentHandler,
         GhostDescriptionIntentHandler,
+        GhostResponseIntentHandler,
         HelpIntentHandler,
         CancelAndStopIntentHandler,
         FallbackIntentHandler,

@@ -93,7 +93,7 @@ const GhostResponseIntentHandler = {
             const ghosts = []
             Skill.ghosts.find(ghost => {
                 // TODO add if
-                ghosts.push(`${ghost.indefiniteArticle} ${ghost.name}`)
+                ghosts.push(ghost.indefiniteArticle)
             })
 
             if (ghosts.length === 1) {

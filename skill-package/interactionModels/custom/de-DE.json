@@ -33,9 +33,13 @@
           ],
           "samples": [
             "welcher Geist macht {beweis}",
+            "welcher Geist {beweis} macht",
             "welcher Geist hat {beweis}",
+            "welcher Geist {beweis} hat",
             "welcher Geist hinterlässt {beweis}",
-            "welcher Geist sorgt für {beweis}"
+            "welcher Geist {beweis} hinterlässt",
+            "welcher Geist sorgt für {beweis}",
+            "welcher Geist für {beweis} sorgt"
           ]
         },
         {
@@ -47,11 +51,11 @@
             }
           ],
           "samples": [
-            "welcher Geist spricht über die Geisterbox",
             "welcher Geist reagiert auf {beweis}",
-            "welcher Geist reagiert auf das {beweis}",
-            "welcher Geist reagiert auf die {beweis}",
-            "welcher Geist reagiert auf den {beweis}"
+            "welcher Geist auf {beweis} reagiert",
+            "welcher Geist auf das {beweis} reagiert",
+            "welcher Geist auf die {beweis} reagiert",
+            "welcher Geist auf den {beweis} reagiert"
           ]
         },
         {
@@ -105,6 +109,12 @@
             "nach beschreibung für eine {geist}",
             "nach beschreibung für den {geist}",
             "nach beschreibung für einen {geist}",
+            "erzähl mir etwas über den {geist}",
+            "erzähl mir was über den {geist}",
+            "erzähl mir etwas über die {geist}",
+            "erzähl mir was über die {geist}",
+            "erzähl mir etwas über das {geist}",
+            "erzähl mir was über das {geist}",
             "woran erkennt man {geist}",
             "woran erkennt man das {geist}",
             "woran erkennt man ein {geist}",
@@ -123,7 +133,7 @@
             "was spricht für ein {geist}",
             "was spricht für den {geist}",
             "was spricht für einen {geist}",
-            "was spricht für die {geist}"
+            "was spricht für die {geist}",
             "was spricht für eine {geist}"
           ]
         },

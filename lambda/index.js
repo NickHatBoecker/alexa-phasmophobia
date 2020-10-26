@@ -288,7 +288,6 @@ const getName = (handlerInput, slotName) => {
 
     let name = '';
     if (slot && slot.value) {
-        name = slot.value.toLowerCase();
         name = resolveSynonyms(slot);
     }
     return name;
@@ -298,10 +297,10 @@ const getName = (handlerInput, slotName) => {
  * Check if the given slot value matches a synonym.
  */
 const resolveSynonyms = slot => {
-    let resolvedName = slot.value;
+    let resolvedName = slot.value.toLowerCase();
 
     ressolvedName = JSON.stringify(slot.resolutions)
-    
+
     return solvedName;
 
     try {

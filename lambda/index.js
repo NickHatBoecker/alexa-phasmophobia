@@ -115,7 +115,7 @@ const GhostResponseIntentHandler = {
             if (ghosts.length === 1) {
                 speakOutput = JSON.stringify(ghosts);
             } else {
-                speakOutput = `!1: Es könnte ${ghosts.join(', ')} sein.`
+                speakOutput = JSON.stringify(ghosts);
             }
         } catch (e) {
             // do nothing

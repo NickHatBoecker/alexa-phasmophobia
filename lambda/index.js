@@ -289,9 +289,34 @@ const getName = (handlerInput, slotName) => {
     let name = '';
     if (slot && slot.value) {
         name = slot.value.toLowerCase();
+        name = resolveSynonyms(slot);
+    }
+    return name;
+}
+
+/**
+ * Check if the given slot value matches a synonym.
+ */
+const resolveSynonyms = slot => {
+    let resolvedName = slot.value;
+
+    try {
+        const resolution = slot.resolutions.resolutionsPerAuthority[0]
+        if (resolution.status.code !== 'ER_SUCCESS_MATCH') {
+            throw;
+        }
+
+        const resolved = resolution.values[0].value.name
+        if (!resolved) {
+            throw;
+        }
+
+        resolvedName = resolved
+    } catch (e) {
+        // Do nothing
     }
 
-    return name;
+    return resolvedName;
 }
 
 const isEmf          = proof => PROOF_EMF.toLowerCase() === proof.toLowerCase();

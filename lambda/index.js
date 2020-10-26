@@ -117,7 +117,6 @@ const GhostResponseIntentHandler = {
             }
         } catch (e) {
             // do nothing
-            speakOutput = `ERROR: ${e.message}`
         }
 
         return handlerInput.responseBuilder
@@ -300,7 +299,7 @@ const getName = (handlerInput, slotName) => {
 const resolveSynonyms = slot => {
     let resolvedName = slot.value.toLowerCase();
 
-    resolvedName = JSON.stringify(slot.resolutions)
+    resolvedName = JSON.stringify(slot.resolutions.resolutionsPerAuthority[0].status.code)
 
     return resolvedName;
 

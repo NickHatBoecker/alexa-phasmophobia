@@ -109,11 +109,11 @@ const GhostResponseIntentHandler = {
 
             const ghosts = Skill.ghosts.filter(ghost => filterGhostByProof(ghost, proofName));
             if (!ghosts.length) {
-                speakOutput = `ERROR: ${proofName}`;
+                speakOutput = `Ich konnte keinen Geist mit dem Beweis "${proofName}" finden.`;
             } else if (ghosts.length === 1) {
-                speakOutput = `Es könnte ${ghosts[0]} sein.`
+                speakOutput = `Es könnte ${ghosts[0].indefiniteArticle} sein.`
             } else {
-                speakOutput = `Es könnte ${ghosts.join(', ')} sein.`
+                speakOutput = `Es könnte ${ghosts.map(x => x.indefiniteArticle).join(', ')} sein.`
             }
         } catch (e) {
             // do nothing

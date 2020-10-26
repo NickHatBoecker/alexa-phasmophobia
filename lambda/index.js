@@ -117,6 +117,7 @@ const GhostResponseIntentHandler = {
             }
         } catch (e) {
             // do nothing
+            speakOutput = `ERROR: ${e.message}`
         }
 
         return handlerInput.responseBuilder
@@ -299,9 +300,9 @@ const getName = (handlerInput, slotName) => {
 const resolveSynonyms = slot => {
     let resolvedName = slot.value.toLowerCase();
 
-    ressolvedName = JSON.stringify(slot.resolutions)
+    resolvedName = JSON.stringify(slot.resolutions)
 
-    return solvedName;
+    return resolvedName;
 
     try {
         const hasMatch = slot.resolutions.resolutionsPerAuthority[0].status.code !== 'ER_SUCCESS_MATCH';

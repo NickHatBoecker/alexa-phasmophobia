@@ -113,9 +113,9 @@ const GhostResponseIntentHandler = {
             }
 
             if (ghosts.length === 1) {
-                speakOutput = `Es könnte ${ghosts[0]} sein.`
+                speakOutput = `1: Es könnte ${ghosts[0]} sein.`
             } else {
-                speakOutput = `Es könnte ${ghosts.join(', ')} sein.`
+                speakOutput = `!1: Es könnte ${ghosts.join(', ')} sein.`
             }
         } catch (e) {
             // do nothing

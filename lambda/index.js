@@ -108,14 +108,14 @@ const GhostResponseIntentHandler = {
             }
 
             const ghosts = Skill.ghosts.filter(ghost => filterGhostByProof(ghost, proofName));
-            if (!ghosts) {
+            if (!ghosts.length) {
                 speakOutput = `ERROR: ${proofName}`;
             }
 
             if (ghosts.length === 1) {
-                speakOutput = JSON.stringify(ghosts);
+                speakOutput = `Es könnte ${ghosts[0]} sein.`
             } else {
-                speakOutput = `length: ${ghosts.length}`
+                speakOutput = `Es könnte ${ghosts.join(', ')} sein.`
             }
         } catch (e) {
             // do nothing

@@ -115,7 +115,7 @@ const GhostResponseIntentHandler = {
             if (ghosts.length === 1) {
                 speakOutput = JSON.stringify(ghosts);
             } else {
-                speakOutput = ghosts.length
+                speakOutput = `length: ${ghosts.length}`
             }
         } catch (e) {
             // do nothing

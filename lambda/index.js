@@ -300,8 +300,11 @@ const getName = (handlerInput, slotName) => {
 const resolveSynonyms = slot => {
     let resolvedName = slot.value;
 
+    ressolvedName = JSON.stringify(slot.resolutions)
+    
+    return solvedName;
+
     try {
-        console.log(slot.resolutions)
         const hasMatch = slot.resolutions.resolutionsPerAuthority[0].status.code !== 'ER_SUCCESS_MATCH';
         const resolved = slot.resolutions.resolutionsPerAuthority[0].values[0].value.name;
 

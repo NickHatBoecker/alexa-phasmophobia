@@ -301,17 +301,12 @@ const resolveSynonyms = slot => {
     let resolvedName = slot.value;
 
     try {
-        const resolution = slot.resolutions.resolutionsPerAuthority[0]
-        if (resolution.status.code !== 'ER_SUCCESS_MATCH') {
-            throw;
-        }
+        const hasMatch = slot.resolutions.resolutionsPerAuthority[0].status.code !== 'ER_SUCCESS_MATCH';
+        const resolved = slot.resolutions.resolutionsPerAuthority[0].values[0].value.name;
 
-        const resolved = resolution.values[0].value.name
-        if (!resolved) {
-            throw;
+        if (hasMatch && resolved) {
+            resolvedName = resolved;
         }
-
-        resolvedName = resolved
     } catch (e) {
         // Do nothing
     }

@@ -9,6 +9,13 @@ const Skill = require('skill.js');
 const GHOST_SLOT = 'geist';
 const PROOF_SLOT = 'beweis';
 
+const PROOF_BOOK = 'Geisterbuch';
+const PROOF_BOX = 'Geisterbox';
+const PROOF_EMF = 'EMF';
+const PROOF_FREEZING_TEMPERATURES = 'Gefriertemperaturen';
+const PROOF_FINGERPRINTS = 'Fingerabdrücke';
+const PROOF_ORBS = 'Geisterkugeln';
+
 const LaunchRequestHandler = {
     canHandle(handlerInput) {
         return Alexa.getRequestType(handlerInput.requestEnvelope) === 'LaunchRequest';
@@ -100,11 +107,7 @@ const GhostResponseIntentHandler = {
                 throw "Proof not found"
             }
 
-            const ghosts = []
-            Skill.ghosts.find(ghost => {
-                // TODO add if
-                ghosts.push(ghost.indefiniteArticle)
-            })
+            const ghosts = Skill.ghosts.filter(ghost => filterGhostByProof(ghost, proofName));
 
             if (ghosts.length === 1) {
                 speakOutput = `Es könnte ${ghosts[0]} sein.`
@@ -288,6 +291,34 @@ const getName = (handlerInput, slotName) => {
     }
 
     return name;
+}
+
+const isEmf          = proof => PROOF_EMF === proof;
+const isFingerPrint  = proof => PROOF_FINGERPRINTS === proof;
+const isFreezing     = proof => PROOF_FREEZING_TEMPERATURES === proof;
+const isGhostBox     = proof => PROOF_BOX === proof;
+const isGhostBook    = proof => PROOF_BOOK === proof;
+const isGhostOrbs    = proof => PROOF_ORBS === proof;
+
+const filterGhostByProof = (ghost, proof) => {
+    if (isEmf(proof)) {
+        return ghost.respondsToEmf;
+    }
+    if (isFingerPrint(proof)) {
+        return ghost.respondsToFingerprints;
+    }
+    if (isFreezing(proof)) {
+        return ghost.respondsToFreezingTemparatures;
+    }
+    if (isGhostBox(proof)) {
+        return ghost.respondsToGhostbox;
+    }
+    if (isGhostBook(proof)) {
+        return ghost.respondsToGhostbook;
+    }
+    if (isGhostOrbs(proof)) {
+        return ghost.respondsToGhostOrbs;
+    }
 }
 
 /**

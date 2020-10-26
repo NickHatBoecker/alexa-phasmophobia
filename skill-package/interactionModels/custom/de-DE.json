@@ -24,25 +24,6 @@
                     "samples": []
                 },
                 {
-                    "name": "GhostTrace",
-                    "slots": [
-                        {
-                            "name": "beweis",
-                            "type": "beweis"
-                        }
-                    ],
-                    "samples": [
-                        "welcher Geist macht {beweis}",
-                        "welcher Geist {beweis} macht",
-                        "welcher Geist hat {beweis}",
-                        "welcher Geist {beweis} hat",
-                        "welcher Geist hinterlässt {beweis}",
-                        "welcher Geist {beweis} hinterlässt",
-                        "welcher Geist sorgt für {beweis}",
-                        "welcher Geist für {beweis} sorgt"
-                    ]
-                },
-                {
                     "name": "GhostResponse",
                     "slots": [
                         {
@@ -55,7 +36,28 @@
                         "welcher Geist auf {beweis} reagiert",
                         "welcher Geist auf das {beweis} reagiert",
                         "welcher Geist auf die {beweis} reagiert",
-                        "welcher Geist auf den {beweis} reagiert"
+                        "welcher Geist auf den {beweis} reagiert",
+                        "wer reagiert auf {beweis}",
+                        "wer auf {beweis} reagiert",
+                        "wer auf das {beweis} reagiert",
+                        "wer auf die {beweis} reagiert",
+                        "wer auf den {beweis} reagiert",
+                        "welcher Geist macht {beweis}",
+                        "welcher Geist {beweis} macht",
+                        "welcher Geist hat {beweis}",
+                        "welcher Geist {beweis} hat",
+                        "welcher Geist hinterlässt {beweis}",
+                        "welcher Geist {beweis} hinterlässt",
+                        "welcher Geist sorgt für {beweis}",
+                        "welcher Geist für {beweis} sorgt",
+                        "wer macht {beweis}",
+                        "wer {beweis} macht",
+                        "wer hat {beweis}",
+                        "wer {beweis} hat",
+                        "wer hinterlässt {beweis}",
+                        "wer {beweis} hinterlässt",
+                        "wer sorgt für {beweis}",
+                        "wer für {beweis} sorgt"
                     ]
                 },
                 {
@@ -68,7 +70,15 @@
                         "welcher Geist schreibt ins Geisterbuch",
                         "welcher Geist schreibt in das Buch",
                         "welcher Geist schreibt in das Geisterbuch",
-                        "welcher Geist schreibt ins Buch"
+                        "welcher Geist schreibt ins Buch",
+                        "wer in das Geisterbuch schreibt",
+                        "wer in das Buch schreibt",
+                        "wer ins Buch schreibt",
+                        "wer ins Geisterbuch schreibt",
+                        "wer schreibt ins Geisterbuch",
+                        "wer schreibt in das Buch",
+                        "wer schreibt in das Geisterbuch",
+                        "wer schreibt ins Buch"
                     ]
                 },
                 {
@@ -87,7 +97,21 @@
                         "welcher Geist über Geisterbox spricht",
                         "welcher Geist über Geisterbox kommuniziert",
                         "welcher Geist über Box spricht",
-                        "welcher Geist über Box kommuniziert"
+                        "welcher Geist über Box kommuniziert",
+                        "wer kommuniziert über die Geisterbox",
+                        "wer kommuniziert über die Box",
+                        "wer kommuniziert über Box",
+                        "wer spricht über die Geisterbox",
+                        "wer spricht über die Box",
+                        "wer spricht über Geisterbox",
+                        "wer spricht über Box",
+                        "wer über die Geisterbox spricht",
+                        "wer über die Box spricht",
+                        "wer über die Box kommuniziert",
+                        "wer über Geisterbox spricht",
+                        "wer über Geisterbox kommuniziert",
+                        "wer über Box spricht",
+                        "wer über Box kommuniziert"
                     ]
                 },
                 {
@@ -172,67 +196,38 @@
                     "values": [
                         {
                             "name": {
-                                "value": "Geisterbox"
+                                "value": "Geisterbox",
+                                "synonyms": ["Box"]
                             }
                         },
                         {
                             "name": {
-                                "value": "EMF Reader Level 5"
+                                "value": "EMF",
+                                "synonyms": ["EMF Reader", "Level 5", "EMF Reader Level 5"]
                             }
                         },
                         {
                             "name": {
-                                "value": "EMF Level 5"
+                                "value": "Gefriertemperaturen",
+                                "synonyms": ["Temperaturen", "Minusgrade"]
                             }
                         },
                         {
                             "name": {
-                                "value": "EMF"
+                                "value": "Geisterkugeln",
+                                "synonyms": ["Geisterkugel", "Geisterorb", "Geisterorbs", "Orbs", "Kugeln", "Orb", "Kugel"]
                             }
                         },
                         {
                             "name": {
-                                "value": "Temperaturen"
+                                "value": "Geisterbuch",
+                                "synonyms": ["Buch"]
                             }
                         },
                         {
                             "name": {
-                                "value": "Gefriertemperaturen"
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "Geisterorbs"
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "Geisterorb"
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "Geisterkugeln"
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "Geisterkugel"
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "Geisterbuch"
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "Fingerabdruck"
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "Fingerabdrücke"
+                                "value": "Fingerabdrücke",
+                                "synonyms": ["Fingerabdruck", "Abdruck", "Abdrücke"]
                             }
                         }
                     ],

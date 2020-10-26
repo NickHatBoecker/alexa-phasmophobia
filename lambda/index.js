@@ -294,12 +294,12 @@ const getName = (handlerInput, slotName) => {
     return name;
 }
 
-const isEmf          = proof => PROOF_EMF === proof;
-const isFingerPrint  = proof => PROOF_FINGERPRINTS === proof;
-const isFreezing     = proof => PROOF_FREEZING_TEMPERATURES === proof;
-const isGhostBox     = proof => PROOF_BOX === proof;
-const isGhostBook    = proof => PROOF_BOOK === proof;
-const isGhostOrbs    = proof => PROOF_ORBS === proof;
+const isEmf          = proof => PROOF_EMF.toLowerCase() === proof.toLowerCase();
+const isFingerPrint  = proof => PROOF_FINGERPRINTS.toLowerCase() === proof.toLowerCase();
+const isFreezing     = proof => PROOF_FREEZING_TEMPERATURES.toLowerCase() === proof.toLowerCase();
+const isGhostBox     = proof => PROOF_BOX.toLowerCase() === proof.toLowerCase();
+const isGhostBook    = proof => PROOF_BOOK.toLowerCase() === proof.toLowerCase();
+const isGhostOrbs    = proof => PROOF_ORBS.toLowerCase() === proof.toLowerCase();
 
 const filterGhostByProof = (ghost, proof) => {
     if (isEmf(proof)) {

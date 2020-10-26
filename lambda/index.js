@@ -24,9 +24,9 @@ const LaunchRequestHandler = {
         const speakOutput = 'Welcome, you can say Hello or Help. Which would you like to try?';
 
         return handlerInput.responseBuilder
-            .speak(speakOutput)
-            .reprompt(speakOutput)
-            .getResponse();
+        .speak(speakOutput)
+        .reprompt(speakOutput)
+        .getResponse();
     }
 };
 
@@ -54,8 +54,8 @@ const NameResultIntentHandler = {
         }
 
         return handlerInput.responseBuilder
-            .speak(speakOutput)
-            .getResponse();
+        .speak(speakOutput)
+        .getResponse();
     }
 };
 
@@ -83,8 +83,8 @@ const GhostDescriptionIntentHandler = {
         }
 
         return handlerInput.responseBuilder
-            .speak(speakOutput)
-            .getResponse();
+        .speak(speakOutput)
+        .getResponse();
     }
 }
 
@@ -190,9 +190,9 @@ const HelpIntentHandler = {
         const speakOutput = 'Du findest alle Befehler auf in der Beschreibung dieses Skills';
 
         return handlerInput.responseBuilder
-            .speak(speakOutput)
-            .reprompt(speakOutput)
-            .getResponse();
+        .speak(speakOutput)
+        .reprompt(speakOutput)
+        .getResponse();
     }
 };
 
@@ -206,8 +206,8 @@ const CancelAndStopIntentHandler = {
         const speakOutput = 'Ciao!';
 
         return handlerInput.responseBuilder
-            .speak(speakOutput)
-            .getResponse();
+        .speak(speakOutput)
+        .getResponse();
     }
 };
 /* *
@@ -224,9 +224,9 @@ const FallbackIntentHandler = {
         const speakOutput = 'Tut mir leid, ich habe dich nicht verstanden. Bitte versuche es erneut.';
 
         return handlerInput.responseBuilder
-            .speak(speakOutput)
-            .reprompt(speakOutput)
-            .getResponse();
+        .speak(speakOutput)
+        .reprompt(speakOutput)
+        .getResponse();
     }
 };
 /* *
@@ -258,9 +258,9 @@ const IntentReflectorHandler = {
         const speakOutput = `You just triggered ${intentName}`;
 
         return handlerInput.responseBuilder
-            .speak(speakOutput)
-            //.reprompt('add a reprompt if you want to keep the session open for the user to respond')
-            .getResponse();
+        .speak(speakOutput)
+        //.reprompt('add a reprompt if you want to keep the session open for the user to respond')
+        .getResponse();
     }
 };
 /**
@@ -277,9 +277,9 @@ const ErrorHandler = {
         console.log(`~~~~ Error handled: ${JSON.stringify(error)}`);
 
         return handlerInput.responseBuilder
-            .speak(speakOutput)
-            .reprompt(speakOutput)
-            .getResponse();
+        .speak(speakOutput)
+        .reprompt(speakOutput)
+        .getResponse();
     }
 };
 
@@ -301,6 +301,7 @@ const resolveSynonyms = slot => {
     let resolvedName = slot.value;
 
     try {
+        console.log(slot.resolutions)
         const hasMatch = slot.resolutions.resolutionsPerAuthority[0].status.code !== 'ER_SUCCESS_MATCH';
         const resolved = slot.resolutions.resolutionsPerAuthority[0].values[0].value.name;
 
@@ -348,19 +349,19 @@ const filterGhostByProof = (ghost, proof) => {
  * defined are included below. The order matters - they're processed top to bottom
  * */
 exports.handler = Alexa.SkillBuilders.custom()
-    .addRequestHandlers(
-        LaunchRequestHandler,
-        NameResultIntentHandler,
-        GhostDescriptionIntentHandler,
-        GhostResponseIntentHandler,
-        GhostResponseBookIntentHandler,
-        GhostResponseBoxIntentHandler,
-        HelpIntentHandler,
-        CancelAndStopIntentHandler,
-        FallbackIntentHandler,
-        SessionEndedRequestHandler,
-        IntentReflectorHandler)
-    .addErrorHandlers(
-        ErrorHandler)
-    .withCustomUserAgent('nhb/phasmophobia/v0.0.1')
-    .lambda();
+.addRequestHandlers(
+    LaunchRequestHandler,
+    NameResultIntentHandler,
+    GhostDescriptionIntentHandler,
+    GhostResponseIntentHandler,
+    GhostResponseBookIntentHandler,
+    GhostResponseBoxIntentHandler,
+    HelpIntentHandler,
+    CancelAndStopIntentHandler,
+    FallbackIntentHandler,
+    SessionEndedRequestHandler,
+    IntentReflectorHandler)
+.addErrorHandlers(
+    ErrorHandler)
+.withCustomUserAgent('nhb/phasmophobia/v0.0.1')
+.lambda();

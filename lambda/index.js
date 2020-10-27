@@ -21,7 +21,7 @@ const LaunchRequestHandler = {
         return Alexa.getRequestType(handlerInput.requestEnvelope) === 'LaunchRequest';
     },
     handle(handlerInput) {
-        const speakOutput = 'Welcome, you can say Hello or Help. Which would you like to try?';
+        const speakOutput = 'Willkommen zum Geister Journal von Phasmophobia.';
 
         return handlerInput.responseBuilder
         .speak(speakOutput)
@@ -181,13 +181,30 @@ const GhostResponseBoxIntentHandler = {
     }
 }
 
+const NameGhostsIntentHandler = {
+    canHandle (handlerInput) {
+        const type = handlerInput.requestEnvelope.request.type;
+        const intentName = handlerInput.requestEnvelope.request.intent.name;
+
+        return type === 'IntentRequest' && intentName === 'NameGhosts';
+    },
+    handle (handlerInput) {
+        const ghosts = Skill.ghosts
+        const speakOutput = `Es gibt ${ghosts.map(x => x.indefiniteArticle).join(', ')}.`;
+
+        return handlerInput.responseBuilder
+        .speak(speakOutput)
+        .getResponse();
+    }
+}
+
 const HelpIntentHandler = {
     canHandle(handlerInput) {
         return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
             && Alexa.getIntentName(handlerInput.requestEnvelope) === 'AMAZON.HelpIntent';
     },
     handle(handlerInput) {
-        const speakOutput = 'Du findest alle Befehler auf in der Beschreibung dieses Skills';
+        const speakOutput = 'Du kannst mich folgende Dinge fragen: "Alexa, frag geisterjournal welcher Geist Fingerabdrücke hinterlässt". Oder "Alexa, sag geisterjournal es ist das Phantom". Oder "Alexa, frag geisterjournal woran man den Dämon erkennt".';
 
         return handlerInput.responseBuilder
         .speak(speakOutput)
@@ -203,7 +220,7 @@ const CancelAndStopIntentHandler = {
                 || Alexa.getIntentName(handlerInput.requestEnvelope) === 'AMAZON.StopIntent');
     },
     handle(handlerInput) {
-        const speakOutput = 'Ciao!';
+        const speakOutput = 'Bis zum nächsten Mal!';
 
         return handlerInput.responseBuilder
         .speak(speakOutput)
@@ -354,6 +371,7 @@ exports.handler = Alexa.SkillBuilders.custom()
     GhostResponseIntentHandler,
     GhostResponseBookIntentHandler,
     GhostResponseBoxIntentHandler,
+    NameGhostsIntentHandler,
     HelpIntentHandler,
     CancelAndStopIntentHandler,
     FallbackIntentHandler,

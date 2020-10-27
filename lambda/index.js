@@ -48,10 +48,9 @@ const NameResultIntentHandler = {
             if (!ghostName) {
                 throw "Ghost not found"
             }
-            speakOutput = Skill.ghosts.find(x => x.name.toLowerCase() === ghostName).nameResult;
+            speakOutput = Skill.ghosts.find(x => x.name.toLowerCase() === ghostName.toLowerCase()).nameResult;
         } catch (e) {
             // do nothing
-            speakOutput = getName(handlerInput, GHOST_SLOT)
         }
 
         return handlerInput.responseBuilder

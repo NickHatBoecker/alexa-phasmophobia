@@ -51,6 +51,7 @@ const NameResultIntentHandler = {
             speakOutput = Skill.ghosts.find(x => x.name.toLowerCase() === ghostName).nameResult;
         } catch (e) {
             // do nothing
+            speakOutput = e.message
         }
 
         return handlerInput.responseBuilder

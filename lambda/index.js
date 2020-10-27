@@ -204,7 +204,7 @@ const HelpIntentHandler = {
             && Alexa.getIntentName(handlerInput.requestEnvelope) === 'AMAZON.HelpIntent';
     },
     handle(handlerInput) {
-        const speakOutput = 'Du kannst mich folgende Dinge fragen: "Alexa, frag geisterjournal welcher Geist Fingerabdrücke hinterlässt". Oder "Alexa, sag geisterjournal es ist das Phantom". Oder "Alexa, frag geisterjournal woran man den Dämon erkennt" oder "Alexa, frag geisterjournal welche Geister es gibt". Der Skill reagiert darüber hinaus auf Synonyme zu den Phasmophobia-Beweisen und verschiedenen Satzstellungen.';
+        const speakOutput = 'Du kannst mich folgende Dinge fragen: "Alexa, frag geisterjournal welcher Geist Fingerabdrücke hinterlässt". Oder "Alexa, sag geisterjournal es ist das Phantom". Oder "Alexa, frag geisterjournal woran man den Dämon erkennt". Oder "Alexa, frag geisterjournal welche Geister es gibt". Der Skill reagiert darüber hinaus auf Synonyme zu den Phasmophobia-Beweisen und verschiedenen Satzstellungen.';
 
         return handlerInput.responseBuilder
         .speak(speakOutput)

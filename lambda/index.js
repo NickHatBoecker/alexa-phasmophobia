@@ -21,7 +21,7 @@ const LaunchRequestHandler = {
         return Alexa.getRequestType(handlerInput.requestEnvelope) === 'LaunchRequest';
     },
     handle(handlerInput) {
-        const speakOutput = 'Willkommen zum Geister Journal von Phasmophobia.';
+        const speakOutput = 'Willkommen zum Geister Journal von Phasmophobia. Sag "hilfe" um dir die vorhandenen Sprachbefehle anzuhören oder frag einfach drauf los.';
 
         return handlerInput.responseBuilder
         .speak(speakOutput)
@@ -77,7 +77,7 @@ const GhostDescriptionIntentHandler = {
             if (!ghostName) {
                 throw "Ghost not found"
             }
-            speakOutput = Skill.ghosts.find(x => x.name.toLowerCase() === ghostName).description;
+            speakOutput = Skill.ghosts.find(x => x.name.toLowerCase() === ghostName.toLowerCase()).description;
         } catch (e) {
             // do nothing
         }
@@ -204,7 +204,7 @@ const HelpIntentHandler = {
             && Alexa.getIntentName(handlerInput.requestEnvelope) === 'AMAZON.HelpIntent';
     },
     handle(handlerInput) {
-        const speakOutput = 'Du kannst mich folgende Dinge fragen: "Alexa, frag geisterjournal welcher Geist Fingerabdrücke hinterlässt". Oder "Alexa, sag geisterjournal es ist das Phantom". Oder "Alexa, frag geisterjournal woran man den Dämon erkennt".';
+        const speakOutput = 'Du kannst mich folgende Dinge fragen: "Alexa, frag geisterjournal welcher Geist Fingerabdrücke hinterlässt". Oder "Alexa, sag geisterjournal es ist das Phantom". Oder "Alexa, frag geisterjournal woran man den Dämon erkennt" oder "Alexa, frag geisterjournal welche Geister es gibt". Der Skill reagiert darüber hinaus auf Synonyme zu den Phasmophobia-Beweisen und verschiedenen Satzstellungen.';
 
         return handlerInput.responseBuilder
         .speak(speakOutput)

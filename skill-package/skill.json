@@ -28,22 +28,23 @@
     "manifestVersion": "1.0",
     "publishingInformation": {
       "category": "KNOWLEDGE_AND_TRIVIA",
-      "distributionCountries": [],
-      "isAvailableWorldwide": true,
+      "distributionCountries": ["DE", "CH", "AT"],
+      "isAvailableWorldwide": false,
       "locales": {
         "de-DE": {
-          "description": "Sample Full Description",
+          "description": "Inoffizieller Alexa Skill zum Videospiel Phasmophobia. Frag Alexa zu den Geistern aus, frag um welchen Geist es sich anhand der gefundenen Beweise handeln könnte und lass dir alle Merkmale zu einem Geist aufzählen, um sie im Journal zu notieren.\n\nPrima für Leute, die allein spielen und während der Geisterjagd keine Zeit haben ins Journal zu schauen.",
           "examplePhrases": [
-            "Alexa öffne hallo welt",
-            "hallo",
+            "Alexa öffne geister journal",
+            "es ist das phantom",
+            "welcher geist hinterlässt fingerabdrücke",
             "hilfe"
           ],
           "keywords": [],
           "name": "Phasmophobia",
-          "summary": "Sample Short Description"
+          "summary": "Inoffizieller Alexa Skill zum Videospiel Phasmophobia"
         }
       },
-      "testingInstructions": "Sample Testing Instructions."
+      "testingInstructions": "See example phrases."
     }
   }
 }

@@ -146,6 +146,12 @@
                         "woran erkennt man eine {geist}",
                         "woran erkennt man den {geist}",
                         "woran erkennt man einen {geist}",
+                        "woran man {geist} erkennt",
+                        "woran man einen {geist} erkennt",
+                        "woran man eine {geist} erkennt",
+                        "woran man den {geist} erkennt",
+                        "woran man die {geist} erkennt",
+                        "woran man das {geist} erkennt",
                         "was macht das {geist} aus",
                         "was macht ein {geist} aus",
                         "was macht die {geist} aus",
@@ -188,6 +194,21 @@
                         "es ist das {geist}",
                         "es ist die {geist}",
                         "es ist der {geist}"
+                    ]
+                },
+                {
+                    "name": "NameGhosts",
+                    "samples": [
+                        "welche Geister gibt es",
+                        "welche Geister es gibt",
+                        "welche Geister kennst du",
+                        "welche Geister du kennst",
+                        "welche Geister es kennt",
+                        "welche Geister sie kennt",
+                        "welche Geister existieren",
+                        "nenn mir alle Geister",
+                        "nenn uns alle Geister",
+                        "nenn uns die Geister"
                     ]
                 }
             ],

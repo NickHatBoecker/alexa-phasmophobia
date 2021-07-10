@@ -7,8 +7,7 @@ Inoffizieller Alexa Skill zum Videospiel [Phasmophobia](https://store.steampower
 
 ## Installation
 
-Aktuell ist der Skill noch nicht im Alexa Skill Store zu finden.
-Man könnte ihn aber mit dem öffentlichen Code und dem Link zum gitHub Repository selber in sein Alexa Developer Konto importieren.
+Du findest den Skill im offiziellen [Alexa Skill Store](https://www.amazon.de/dp/B08M3T8W9Z/).
 
 ## Sprachbefehle
 
